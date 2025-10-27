@@ -1,13 +1,16 @@
 # CosmosCost VSCode Theme
 
-A beautiful color theme for Visual Studio Code with both dark and light variants.
+A beautiful color theme for Visual Studio Code that matches the CosmosCost application design system. Features both dark and light variants with a carefully crafted blue-based color palette.
 
 ## Features
 
-- **Dark Theme**: Easy on the eyes with carefully selected colors for long coding sessions
-- **Light Theme**: Clean and bright for daytime coding
+- **Dark Theme**: Deep dark backgrounds (#0a0a0a) with vibrant blue accents (#3b82f6, #60a5fa)
+- **Light Theme**: Clean light backgrounds (#fafaf9) with professional blue tones (#2563eb)
+- **Consistent Branding**: Matches the CosmosCost application color system
+- **Tailwind-Inspired**: Uses colors from the Tailwind CSS palette for familiarity
 - **Semantic Highlighting**: Enhanced code understanding with semantic token support
 - **Complete Coverage**: Supports all popular languages and file types
+- **Git Integration**: Distinct colors for modified, added, deleted, and untracked files
 
 ## Installation
 
@@ -63,21 +66,55 @@ You can customize specific colors by adding to your `settings.json`:
 
 ### Dark Theme
 
-- Background: `#1e1e1e`
-- Foreground: `#d4d4d4`
-- Keywords: `#569cd6`
-- Strings: `#ce9178`
-- Functions: `#dcdcaa`
-- Types: `#4ec9b0`
+**UI Colors:**
+- Editor Background: `#0a0a0a` (Near black)
+- Sidebar Background: `#0f172a` (Slate 950)
+- Activity Bar: `#0f172a` with `#60a5fa` accents (Blue 400)
+- Primary Accent: `#3b82f6` (Blue 500)
+- Secondary Accent: `#60a5fa` (Blue 400)
+
+**Syntax Colors:**
+- Keywords: `#a78bfa` / `#8b5cf6` (Purple 400/500)
+- Strings: `#22c55e` (Green 500)
+- Functions: `#60a5fa` (Blue 400)
+- Classes/Types: `#06b6d4` (Cyan 500)
+- Constants: `#fb923c` (Orange 400)
+- Attributes: `#ec4899` (Pink 500)
+- Comments: `#64748b` (Slate 500)
+- Errors: `#ef4444` (Red 500)
+- Warnings: `#f97316` (Orange 500)
+
+**Git Decorations:**
+- Modified: `#f97316` (Orange)
+- Added: `#22c55e` (Green)
+- Deleted: `#ef4444` (Red)
+- Untracked: `#22c55e` (Green)
 
 ### Light Theme
 
-- Background: `#ffffff`
-- Foreground: `#000000`
-- Keywords: `#0000ff`
-- Strings: `#a31515`
-- Functions: `#795e26`
-- Types: `#267f99`
+**UI Colors:**
+- Editor Background: `#fafaf9` (Stone 50)
+- Sidebar Background: `#f8fafc` (Slate 50)
+- Activity Bar: `#f8fafc` with `#2563eb` accents (Blue 600)
+- Primary Accent: `#2563eb` (Blue 600)
+- Secondary Accent: `#1e40af` (Blue 700)
+
+**Syntax Colors:**
+- Keywords: `#7c3aed` / `#6d28d9` (Purple 600/700)
+- Strings: `#15803d` (Green 700)
+- Functions: `#1e40af` (Blue 700)
+- Classes/Types: `#0e7490` (Cyan 700)
+- Constants: `#ea580c` (Orange 600)
+- Attributes: `#be185d` (Pink 700)
+- Comments: `#64748b` (Slate 500)
+- Errors: `#dc2626` (Red 600)
+- Warnings: `#ea580c` (Orange 600)
+
+**Git Decorations:**
+- Modified: `#ea580c` (Orange)
+- Added: `#16a34a` (Green)
+- Deleted: `#dc2626` (Red)
+- Untracked: `#16a34a` (Green)
 
 ## Development
 
