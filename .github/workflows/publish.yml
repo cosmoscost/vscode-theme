@@ -9,6 +9,9 @@ on:
         default: 'patch'
         type: string
 
+permissions:
+  contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -48,24 +51,28 @@ jobs:
         run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ steps.version.outputs.version }}
-          release_name: Release v${{ steps.version.outputs.version }}
+          name: Release v${{ steps.version.outputs.version }}
           body: |
-            Published CosmosCost Theme v${{ steps.version.outputs.version }} to VS Code Marketplace
+            ## 🎨 CosmosCost Theme v${{ steps.version.outputs.version }}
 
-            ## Installation
+            Published to VS Code Marketplace with soft pastel orange colors and vibrant purples!
+
+            ### 📦 Installation
             Install from VS Code Marketplace: [CosmosCost Theme](https://marketplace.visualstudio.com/items?itemName=cosmoscost.cosmoscost)
 
             Or install via command:
-            ```
+            ```bash
             code --install-extension cosmoscost.cosmoscost
             ```
+
+            ### ✨ What's New
+            Check the [CHANGELOG](https://github.com/cosmoscost/vscode-theme/blob/main/README.md#-changelog) for details.
           draft: false
           prerelease: false
+          files: '*.vsix'
 
       - name: Upload VSIX artifact
         uses: actions/upload-artifact@v4
