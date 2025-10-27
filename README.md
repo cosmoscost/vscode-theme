@@ -4,10 +4,10 @@ A beautiful color theme for Visual Studio Code that matches the CosmosCost appli
 
 ## Features
 
-- **Dark Theme**: Deep dark backgrounds (#0a0a0a) with vibrant blue accents (#3b82f6, #60a5fa)
-- **Light Theme**: Clean light backgrounds (#fafaf9) with professional blue tones (#2563eb)
+- **Dark Theme**: Dark blue backgrounds (#0f172a) with vibrant purple and orange accents
+- **Light Theme**: Clean light backgrounds (#fafaf9) with professional blue and orange tones
 - **Consistent Branding**: Matches the CosmosCost application color system
-- **Tailwind-Inspired**: Uses colors from the Tailwind CSS palette for familiarity
+- **Aura-Inspired**: Based on the popular Aura Dark theme structure with CosmosCost colors
 - **Semantic Highlighting**: Enhanced code understanding with semantic token support
 - **Complete Coverage**: Supports all popular languages and file types
 - **Git Integration**: Distinct colors for modified, added, deleted, and untracked files
@@ -67,54 +67,54 @@ You can customize specific colors by adding to your `settings.json`:
 ### Dark Theme
 
 **UI Colors:**
-- Editor Background: `#0a0a0a` (Near black)
-- Sidebar Background: `#0f172a` (Slate 950)
-- Activity Bar: `#0f172a` with `#60a5fa` accents (Blue 400)
-- Primary Accent: `#3b82f6` (Blue 500)
-- Secondary Accent: `#60a5fa` (Blue 400)
+- Editor Background: `#0f172a` (Dark blue - matches CosmosCost app)
+- Sidebar Background: `#0f172a` (Dark blue)
+- Activity Bar: `#0f172a` with `#f97316` accents (Orange)
+- Primary Accent: `#a78bfa` (Purple 400)
+- Secondary Accent: `#f97316` (Orange 500)
 
 **Syntax Colors:**
-- Keywords: `#a78bfa` / `#8b5cf6` (Purple 400/500)
-- Strings: `#22c55e` (Green 500)
-- Functions: `#60a5fa` (Blue 400)
+- Keywords: `#a78bfa` (Purple 400)
+- Strings: `#f97316` (Orange 500)
+- Functions: `#fb923c` (Orange 400)
 - Classes/Types: `#06b6d4` (Cyan 500)
-- Constants: `#fb923c` (Orange 400)
-- Attributes: `#ec4899` (Pink 500)
+- Properties: `#ec4899` (Pink 500)
+- Variables: `#ededed` (Light gray)
 - Comments: `#64748b` (Slate 500)
 - Errors: `#ef4444` (Red 500)
-- Warnings: `#f97316` (Orange 500)
+- Warnings: `#fb923c` (Orange 400)
 
 **Git Decorations:**
-- Modified: `#f97316` (Orange)
-- Added: `#22c55e` (Green)
+- Modified: `#fb923c` (Orange)
+- Added: `#f97316` (Orange)
 - Deleted: `#ef4444` (Red)
-- Untracked: `#22c55e` (Green)
+- Untracked: `#f97316` (Orange)
 
 ### Light Theme
 
 **UI Colors:**
 - Editor Background: `#fafaf9` (Stone 50)
-- Sidebar Background: `#f8fafc` (Slate 50)
-- Activity Bar: `#f8fafc` with `#2563eb` accents (Blue 600)
-- Primary Accent: `#2563eb` (Blue 600)
-- Secondary Accent: `#1e40af` (Blue 700)
+- Sidebar Background: `#fafaf9` (Stone 50)
+- Activity Bar: `#f8fafc` with `#ea580c` accents (Orange)
+- Primary Accent: `#7c3aed` (Purple 600)
+- Secondary Accent: `#ea580c` (Orange 600)
 
 **Syntax Colors:**
-- Keywords: `#7c3aed` / `#6d28d9` (Purple 600/700)
-- Strings: `#15803d` (Green 700)
-- Functions: `#1e40af` (Blue 700)
-- Classes/Types: `#0e7490` (Cyan 700)
-- Constants: `#ea580c` (Orange 600)
-- Attributes: `#be185d` (Pink 700)
-- Comments: `#64748b` (Slate 500)
+- Keywords: `#7c3aed` (Purple 600)
+- Strings: `#ea580c` (Orange 600)
+- Functions: `#c2410c` (Orange 700)
+- Classes/Types: `#0891b2` (Cyan 600)
+- Properties: `#be185d` (Pink 700)
+- Variables: `#171717` (Dark gray)
+- Comments: `#94a3b8` (Slate 400)
 - Errors: `#dc2626` (Red 600)
-- Warnings: `#ea580c` (Orange 600)
+- Warnings: `#c2410c` (Orange 700)
 
 **Git Decorations:**
-- Modified: `#ea580c` (Orange)
-- Added: `#16a34a` (Green)
+- Modified: `#c2410c` (Orange)
+- Added: `#ea580c` (Orange)
 - Deleted: `#dc2626` (Red)
-- Untracked: `#16a34a` (Green)
+- Untracked: `#ea580c` (Orange)
 
 ## Development
 
@@ -154,6 +154,8 @@ Key sections to modify:
 
 ### Building and Publishing
 
+#### Manual Publishing
+
 ```bash
 # Package the extension
 vsce package
@@ -163,6 +165,54 @@ vsce package
 # Publish to marketplace (requires publisher account)
 vsce publish
 ```
+
+#### Automated Publishing with GitHub Actions
+
+This repository includes a GitHub Actions workflow for automated publishing to the VS Code Marketplace.
+
+**Setup Steps:**
+
+1. **Get a Personal Access Token (PAT)**:
+   - Go to [Azure DevOps](https://dev.azure.com)
+   - Create an organization if you don't have one
+   - Click your profile icon → **Personal access tokens**
+   - Click **New Token** and configure:
+     - Name: `VS Code Marketplace`
+     - Organization: **All accessible organizations**
+     - Scopes: Select **Marketplace > Manage**
+   - Copy the generated token
+
+2. **Create a Publisher** (if you haven't already):
+   - Visit [Visual Studio Marketplace Publisher Management](https://marketplace.visualstudio.com/manage)
+   - Log in with your Microsoft account
+   - Click **Create publisher**
+   - Set your publisher ID and name
+   - Update `package.json` with your publisher ID
+
+3. **Add Secret to GitHub Repository**:
+   - Go to your GitHub repository
+   - Navigate to **Settings** → **Secrets and variables** → **Actions**
+   - Click **New repository secret**
+   - Name: `VSCE_PAT`
+   - Value: Paste your Personal Access Token
+   - Click **Add secret**
+
+4. **Publish Using Workflow**:
+   - Go to **Actions** tab in your GitHub repository
+   - Select **Publish Extension** workflow
+   - Click **Run workflow**
+   - Choose version increment:
+     - `patch` - 0.0.1 → 0.0.2 (bug fixes)
+     - `minor` - 0.0.1 → 0.1.0 (new features)
+     - `major` - 0.0.1 → 1.0.0 (breaking changes)
+     - Or specify exact version: `1.2.3`
+   - Click **Run workflow**
+
+The workflow will:
+- Package the extension
+- Publish to VS Code Marketplace
+- Create a GitHub Release with the version tag
+- Upload the `.vsix` file as an artifact
 
 ## Contributing
 

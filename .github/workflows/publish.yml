@@ -1,0 +1,75 @@
+name: Publish Extension
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version increment (major, minor, patch) or specific version (e.g., 1.0.0)'
+        required: false
+        default: 'patch'
+        type: string
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install vsce
+        run: npm install -g @vscode/vsce
+
+      - name: Verify package.json
+        run: |
+          echo "Current version:"
+          node -p "require('./package.json').version"
+          echo "Publisher:"
+          node -p "require('./package.json').publisher"
+
+      - name: Package extension
+        run: vsce package
+
+      - name: Publish to VS Code Marketplace
+        run: vsce publish ${{ inputs.version }}
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - name: Get published version
+        id: version
+        run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          release_name: Release v${{ steps.version.outputs.version }}
+          body: |
+            Published CosmosCost Theme v${{ steps.version.outputs.version }} to VS Code Marketplace
+
+            ## Installation
+            Install from VS Code Marketplace: [CosmosCost Theme](https://marketplace.visualstudio.com/items?itemName=cosmoscost.cosmoscost)
+
+            Or install via command:
+            ```
+            code --install-extension cosmoscost.cosmoscost
+            ```
+          draft: false
+          prerelease: false
+
+      - name: Upload VSIX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cosmoscost-${{ steps.version.outputs.version }}.vsix
+          path: '*.vsix'
