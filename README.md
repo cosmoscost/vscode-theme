@@ -21,15 +21,6 @@ A beautiful color theme for Visual Studio Code that matches the CosmosCost appli
 3. Search for "CosmosCost"
 4. Click Install
 
-### From VSIX File (Local Installation)
-
-1. Download the `.vsix` file
-2. Open VS Code
-3. Go to Extensions view (`Ctrl+Shift+X` / `Cmd+Shift+X`)
-4. Click on the `...` menu at the top
-5. Select "Install from VSIX..."
-6. Choose the downloaded `.vsix` file
-
 ## Activation
 
 1. Open VS Code
