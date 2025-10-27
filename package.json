@@ -35,9 +35,9 @@
     "type": "git",
     "url": "https://github.com/cosmoscost/vscode-theme.git"
   },
-  "icon": "icon.png",
+  "icon": "assets/images/icon.png",
   "galleryBanner": {
-    "color": "#1e1e1e",
+    "color": "#15141b",
     "theme": "dark"
   }
 }
