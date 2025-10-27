@@ -1,18 +1,31 @@
-# CosmosCost VSCode Theme
+# 🎨 CosmosCost VSCode Theme
 
-A beautiful color theme for Visual Studio Code that matches the CosmosCost application design system. Features both dark and light variants with a carefully crafted blue-based color palette.
+A beautiful color theme for Visual Studio Code that matches the CosmosCost application design system. Features both dark and light variants with a carefully crafted color palette featuring soft pastel oranges and vibrant purples.
 
-## Features
+## 📸 Preview
 
-- **Dark Theme**: Dark blue backgrounds (#0f172a) with vibrant purple and orange accents
-- **Light Theme**: Clean light backgrounds (#fafaf9) with professional blue and orange tones
+<div align="center">
+
+<img src="assets/screnshoots/SCR-20251027-iodm.png" alt="CosmosCost Dark Theme - Editor View" width="45%"/> <img src="assets/screnshoots/SCR-20251027-iopk.png" alt="CosmosCost Dark Theme - Full View" width="45%"/>
+
+<img src="assets/screnshoots/SCR-20251027-ioro.png" alt="CosmosCost Light Theme - Editor View" width="45%"/> <img src="assets/screnshoots/SCR-20251027-ioxj.png" alt="CosmosCost Light Theme - Full View" width="45%"/>
+
+</div>
+
+---
+
+## ✨ Features
+
+- **Dark Theme**: Dark blue backgrounds (#0f172a) with vibrant purple and soft pastel orange accents
+- **Light Theme**: Clean light backgrounds (#fafaf9) with professional purple and pastel orange tones
 - **Consistent Branding**: Matches the CosmosCost application color system
 - **Aura-Inspired**: Based on the popular Aura Dark theme structure with CosmosCost colors
 - **Semantic Highlighting**: Enhanced code understanding with semantic token support
 - **Complete Coverage**: Supports all popular languages and file types
 - **Git Integration**: Distinct colors for modified, added, deleted, and untracked files
+- **Pastel Palette**: Soft, easy-on-the-eyes orange tones for extended coding sessions
 
-## Installation
+## 📦 Installation
 
 ### From VS Code Marketplace
 
@@ -21,7 +34,7 @@ A beautiful color theme for Visual Studio Code that matches the CosmosCost appli
 3. Search for "CosmosCost"
 4. Click Install
 
-## Activation
+## 🚀 Activation
 
 1. Open VS Code
 2. Press `Ctrl+K Ctrl+T` (or `Cmd+K Cmd+T` on Mac) to open theme selector
@@ -34,7 +47,7 @@ Or use Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`):
 - Type "Preferences: Color Theme"
 - Select your preferred theme
 
-## Customization
+## 🎨 Customization
 
 You can customize specific colors by adding to your `settings.json`:
 
@@ -53,69 +66,69 @@ You can customize specific colors by adding to your `settings.json`:
 }
 ```
 
-## Color Palette
+## 🎨 Color Palette
 
-### Dark Theme
+### 🌙 Dark Theme
 
 **UI Colors:**
 - Editor Background: `#0f172a` (Dark blue - matches CosmosCost app)
 - Sidebar Background: `#0f172a` (Dark blue)
-- Activity Bar: `#0f172a` with `#f97316` accents (Orange)
+- Activity Bar: `#0f172a` with `#f59e6d` accents (Pastel Orange)
 - Primary Accent: `#a78bfa` (Purple 400)
-- Secondary Accent: `#f97316` (Orange 500)
+- Secondary Accent: `#f59e6d` (Pastel Orange)
 
 **Syntax Colors:**
 - Keywords: `#a78bfa` (Purple 400)
-- Strings: `#f97316` (Orange 500)
-- Functions: `#fb923c` (Orange 400)
+- Strings: `#f59e6d` (Pastel Orange)
+- Functions: `#f7b890` (Light Pastel Orange)
 - Classes/Types: `#06b6d4` (Cyan 500)
 - Properties: `#ec4899` (Pink 500)
 - Variables: `#ededed` (Light gray)
 - Comments: `#64748b` (Slate 500)
 - Errors: `#ef4444` (Red 500)
-- Warnings: `#fb923c` (Orange 400)
+- Warnings: `#f7b890` (Light Pastel Orange)
 
 **Git Decorations:**
-- Modified: `#fb923c` (Orange)
-- Added: `#f97316` (Orange)
+- Modified: `#f7b890` (Light Pastel Orange)
+- Added: `#f59e6d` (Pastel Orange)
 - Deleted: `#ef4444` (Red)
-- Untracked: `#f97316` (Orange)
+- Untracked: `#f59e6d` (Pastel Orange)
 
-### Light Theme
+### ☀️ Light Theme
 
 **UI Colors:**
 - Editor Background: `#fafaf9` (Stone 50)
 - Sidebar Background: `#fafaf9` (Stone 50)
-- Activity Bar: `#f8fafc` with `#ea580c` accents (Orange)
+- Activity Bar: `#f8fafc` with `#e88a5d` accents (Pastel Orange)
 - Primary Accent: `#7c3aed` (Purple 600)
-- Secondary Accent: `#ea580c` (Orange 600)
+- Secondary Accent: `#e88a5d` (Pastel Orange)
 
 **Syntax Colors:**
 - Keywords: `#7c3aed` (Purple 600)
-- Strings: `#ea580c` (Orange 600)
-- Functions: `#c2410c` (Orange 700)
+- Strings: `#e88a5d` (Pastel Orange)
+- Functions: `#d8916d` (Soft Pastel Orange)
 - Classes/Types: `#0891b2` (Cyan 600)
 - Properties: `#be185d` (Pink 700)
 - Variables: `#171717` (Dark gray)
 - Comments: `#94a3b8` (Slate 400)
 - Errors: `#dc2626` (Red 600)
-- Warnings: `#c2410c` (Orange 700)
+- Warnings: `#d8916d` (Soft Pastel Orange)
 
 **Git Decorations:**
-- Modified: `#c2410c` (Orange)
-- Added: `#ea580c` (Orange)
+- Modified: `#d8916d` (Soft Pastel Orange)
+- Added: `#e88a5d` (Pastel Orange)
 - Deleted: `#dc2626` (Red)
-- Untracked: `#ea580c` (Orange)
+- Untracked: `#e88a5d` (Pastel Orange)
 
-## Development
+## 🛠️ Development
 
-### Prerequisites
+### 📋 Prerequisites
 
 - Node.js and npm
 - Visual Studio Code
 - `@vscode/vsce` CLI tool
 
-### Setup
+### ⚙️ Setup
 
 ```bash
 # Clone the repository
@@ -126,12 +139,12 @@ cd vscode-theme
 npm install -g @vscode/vsce
 ```
 
-### Testing Locally
+### 🧪 Testing Locally
 
 1. Press `F5` in VS Code to open a new Extension Development Host window
 2. In the new window, select your theme from the theme picker
 
-### Modifying Colors
+### 🎨 Modifying Colors
 
 Edit the theme files in the `themes/` directory:
 
@@ -143,9 +156,9 @@ Key sections to modify:
 - **`colors`**: Workbench UI colors (editor, sidebar, terminal, etc.)
 - **`tokenColors`**: Syntax highlighting colors for code
 
-### Building and Publishing
+### 📦 Building and Publishing
 
-#### Manual Publishing
+#### 🔨 Manual Publishing
 
 ```bash
 # Package the extension
@@ -157,13 +170,13 @@ vsce package
 vsce publish
 ```
 
-#### Automated Publishing with GitHub Actions
+#### 🤖 Automated Publishing with GitHub Actions
 
 This repository includes a GitHub Actions workflow for automated publishing to the VS Code Marketplace.
 
 **Setup Steps:**
 
-1. **Get a Personal Access Token (PAT)**:
+1. **🔑 Get a Personal Access Token (PAT)**:
    - Go to [Azure DevOps](https://dev.azure.com)
    - Create an organization if you don't have one
    - Click your profile icon → **Personal access tokens**
@@ -173,14 +186,14 @@ This repository includes a GitHub Actions workflow for automated publishing to t
      - Scopes: Select **Marketplace > Manage**
    - Copy the generated token
 
-2. **Create a Publisher** (if you haven't already):
+2. **👤 Create a Publisher** (if you haven't already):
    - Visit [Visual Studio Marketplace Publisher Management](https://marketplace.visualstudio.com/manage)
    - Log in with your Microsoft account
    - Click **Create publisher**
    - Set your publisher ID and name
    - Update `package.json` with your publisher ID
 
-3. **Add Secret to GitHub Repository**:
+3. **🔐 Add Secret to GitHub Repository**:
    - Go to your GitHub repository
    - Navigate to **Settings** → **Secrets and variables** → **Actions**
    - Click **New repository secret**
@@ -188,7 +201,7 @@ This repository includes a GitHub Actions workflow for automated publishing to t
    - Value: Paste your Personal Access Token
    - Click **Add secret**
 
-4. **Publish Using Workflow**:
+4. **🚀 Publish Using Workflow**:
    - Go to **Actions** tab in your GitHub repository
    - Select **Publish Extension** workflow
    - Click **Run workflow**
@@ -205,19 +218,19 @@ The workflow will:
 - Create a GitHub Release with the version tag
 - Upload the `.vsix` file as an artifact
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+## 📄 License
 
 MIT License - feel free to use and modify as needed.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 Inspired by the VS Code default themes and community feedback.
 
-## Changelog
+## 📝 Changelog
 
 ### 0.0.1
 
@@ -225,18 +238,17 @@ Inspired by the VS Code default themes and community feedback.
 - Dark theme variant
 - Light theme variant
 - Semantic highlighting support
+- Updated orange colors to soft pastel tones for better visual comfort
+- Refined color palette across both dark and light themes
+- Improved consistency in syntax highlighting
 
-## Support
+## 💬 Support
 
 If you encounter any issues or have suggestions, please file an issue on the GitHub repository.
 
-## Screenshots
+## 💡 Tips for Customization
 
-_Add screenshots of your theme in action here_
-
-## Tips for Customization
-
-### Common Modifications
+### 🔧 Common Modifications
 
 1. **Change Editor Background**:
 
@@ -254,7 +266,7 @@ _Add screenshots of your theme in action here_
    - `statusBar.background`
    - `terminal.background`
 
-### Useful Resources
+### 📚 Useful Resources
 
 - [VS Code Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
 - [TextMate Scopes](https://macromates.com/manual/en/language_grammars)
@@ -262,4 +274,4 @@ _Add screenshots of your theme in action here_
 
 ---
 
-**Enjoy coding with CosmosCost!**
+**🌟 Enjoy coding with CosmosCost! 🚀**
