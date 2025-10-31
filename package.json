@@ -2,7 +2,7 @@
   "name": "cosmoscost",
   "displayName": "CosmosCost",
   "description": "CosmosCost - A beautiful color theme for VS Code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "cosmoscost",
   "engines": {
     "vscode": "^1.105.0"
@@ -40,5 +40,10 @@
     "color": "#0f172a",
     "theme": "dark"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "package": "vsce package",
+    "package:analyze": "vsce package --out test.vsix && vsce ls test.vsix && du -h test.vsix && rm test.vsix",
+    "package:size": "vsce package --out test.vsix && du -h test.vsix | cut -f1 && rm test.vsix"
+  }
 }

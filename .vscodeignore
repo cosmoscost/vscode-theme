@@ -1,13 +1,31 @@
+# Development files
 .vscode/**
 .vscode-test/**
 .gitignore
 .yarnrc
+.editorconfig
 vsc-extension-quickstart.md
 **/jsconfig.json
 **/*.map
 **/.eslintrc.json
+
+# Dependencies
 node_modules/**
+
+# Git
 .git/**
-.DS_Store
 *.vsix
-.editorconfig
+
+# Screenshots (only for GitHub, not needed in VSIX)
+assets/screnshoots/**
+assets/README.md
+
+# CI/CD and tooling
+.github/**
+.claude/**
+
+# Documentation (GitHub/Marketplace serves this)
+README.md
+
+# macOS
+.DS_Store

@@ -31,6 +31,16 @@ jobs:
       - name: Install vsce
         run: npm install -g @vscode/vsce
 
+      - name: Install pngquant for icon optimization
+        run: sudo apt-get update && sudo apt-get install -y pngquant
+
+      - name: Optimize icon
+        run: |
+          cp assets/images/icon.png assets/images/icon-backup.png
+          pngquant --quality=65-80 assets/images/icon.png --force --output assets/images/icon.png
+          echo "Icon optimized from $(du -h assets/images/icon-backup.png | cut -f1) to $(du -h assets/images/icon.png | cut -f1)"
+          rm assets/images/icon-backup.png
+
       - name: Verify package.json
         run: |
           echo "Current version:"
@@ -40,6 +50,14 @@ jobs:
 
       - name: Package extension
         run: vsce package
+
+      - name: Check package size
+        run: |
+          SIZE=$(du -h *.vsix | cut -f1)
+          echo "📦 Package size: $SIZE"
+          echo ""
+          echo "📋 Package contents:"
+          vsce ls *.vsix
 
       - name: Publish to VS Code Marketplace
         run: vsce publish ${{ inputs.version }}

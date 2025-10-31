@@ -166,9 +166,24 @@ vsce package
 
 # This creates a .vsix file you can install locally or share
 
+# Check package size and contents
+npm run package:analyze
+
+# Check just the package size
+npm run package:size
+
 # Publish to marketplace (requires publisher account)
 vsce publish
 ```
+
+**Package Size Optimization:**
+
+The extension is optimized for minimal file size:
+- **Final package size**: ~13-16KB (compressed)
+- Screenshots are excluded from the VSIX (visible on GitHub only)
+- Icon is compressed using pngquant
+- Development files (.github, .claude) are excluded
+- Only runtime files are included: themes, icon, and metadata
 
 #### 🤖 Automated Publishing with GitHub Actions
 
@@ -213,7 +228,9 @@ This repository includes a GitHub Actions workflow for automated publishing to t
    - Click **Run workflow**
 
 The workflow will:
-- Package the extension
+- Optimize the icon image for smaller file size
+- Package the extension (excluding screenshots and development files)
+- Check and report the package size
 - Publish to VS Code Marketplace
 - Create a GitHub Release with the version tag
 - Upload the `.vsix` file as an artifact
@@ -231,6 +248,19 @@ MIT License - feel free to use and modify as needed.
 Inspired by the VS Code default themes and community feedback.
 
 ## 📝 Changelog
+
+### 0.0.2
+
+- **Package Size Optimization**: Reduced VSIX size from 2.3MB to ~14KB (99.4% reduction)
+  - Excluded screenshots from package (visible on GitHub only)
+  - Compressed icon from 12KB to 3KB using pngquant
+  - Excluded development files (.github, .claude) from package
+- **Build Improvements**:
+  - Added `package:analyze` script for package analysis
+  - Added `package:size` script for quick size checks
+  - Enhanced GitHub Actions workflow with automatic icon optimization
+  - Added package size reporting in CI/CD pipeline
+- **Documentation**: Updated README with package optimization details
 
 ### 0.0.1
 
