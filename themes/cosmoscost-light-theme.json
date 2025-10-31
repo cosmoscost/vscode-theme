@@ -161,7 +161,6 @@
                 "keyword.control.flow",
                 "storage.modifier",
                 "keyword.operator",
-                "entity.other.attribute-name.class.css",
                 "entity.other.keyframe-offset",
                 "markup.heading",
                 "markup.underline.link",
@@ -186,13 +185,11 @@
                 "markup.inserted",
                 "markup.raw",
                 "constant",
-                "source.env",
                 "support.type.builtin.graphql",
                 "variable.other.quoted.double",
                 "markup.inline.raw.string.markdown",
                 "entity.other.attribute-name.id.css",
-                "meta.jsx.children",
-                "JSXNested"
+                "meta.jsx.children"
             ],
             "settings": {
                 "foreground": "#e88a5d"
@@ -237,7 +234,6 @@
                 "entity.other.attribute-name",
                 "meta.object-literal.key",
                 "variable.object.property",
-                "variable.other.property",
                 "variable.other.object.property",
                 "variable.other.constant.property",
                 "meta.type.annotation",
@@ -245,8 +241,7 @@
                 "support.type.vendored",
                 "constant.language.symbol.elixir",
                 "variable.graphql",
-                "meta.attribute.python",
-                "source.dart"
+                "meta.attribute.python"
             ],
             "settings": {
                 "foreground": "#be185d"
@@ -259,7 +254,6 @@
                 "markup.list",
                 "support.constant.property-value.css",
                 "variable.parameter.keyframe-list.css",
-                "source.css",
                 "support.constant.font-name",
                 "support.constant.vendored.property-value",
                 "variable.parameter",
@@ -270,9 +264,7 @@
                 "punctuation.section.embedded",
                 "meta.embedded.expression",
                 "punctuation.terminator.dart",
-                "punctuation.dot.dart",
-                "variable.language",
-                "variable.other.property"
+                "punctuation.dot.dart"
             ],
             "settings": {
                 "foreground": "#171717"
