@@ -2,6 +2,7 @@
     "name": "CosmosCost Dark",
     "$schema": "vscode://schemas/color-theme",
     "type": "dark",
+    "semanticHighlighting": true,
     "colors": {
         "focusBorder": "#60a5fa33",
         "foreground": "#ededed",
@@ -345,5 +346,34 @@
                 "fontStyle": "italic"
             }
         }
-    ]
+    ],
+    "semanticTokenColors": {
+        "namespace": "#06b6d4",
+        "class": "#06b6d4",
+        "enum": "#06b6d4",
+        "interface": "#06b6d4",
+        "struct": "#06b6d4",
+        "typeParameter": "#06b6d4",
+        "type": "#06b6d4",
+        "parameter": "#ededed",
+        "variable": "#ededed",
+        "variable.readonly": "#f59e6d",
+        "variable.defaultLibrary": "#a78bfa",
+        "property": "#ec4899",
+        "property.readonly": "#f59e6d",
+        "enumMember": "#f59e6d",
+        "decorator": "#ec4899",
+        "event": "#ec4899",
+        "function": "#f7b890",
+        "function.defaultLibrary": "#a78bfa",
+        "method": "#f7b890",
+        "macro": "#a78bfa",
+        "keyword": "#a78bfa",
+        "modifier": "#a78bfa",
+        "comment": "#64748b",
+        "string": "#f59e6d",
+        "number": "#f59e6d",
+        "regexp": "#f59e6d",
+        "operator": "#a78bfa"
+    }
 }
