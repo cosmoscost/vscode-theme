@@ -161,6 +161,13 @@
                 "keyword.control.flow",
                 "storage.modifier",
                 "keyword.operator",
+                "keyword.operator.channel.go",
+                "keyword.declaration.terraform",
+                "keyword.other.terraform",
+                "keyword.other.import",
+                "keyword.other.package",
+                "keyword.import",
+                "keyword.package",
                 "entity.other.keyframe-offset",
                 "markup.heading",
                 "markup.underline.link",
@@ -185,6 +192,10 @@
                 "markup.inserted",
                 "markup.raw",
                 "constant",
+                "constant.language",
+                "constant.language.boolean",
+                "constant.language.null",
+                "constant.language.undefined",
                 "support.type.builtin.graphql",
                 "variable.other.quoted.double",
                 "markup.inline.raw.string.markdown",
@@ -241,7 +252,13 @@
                 "support.type.vendored",
                 "constant.language.symbol.elixir",
                 "variable.graphql",
-                "meta.attribute.python"
+                "meta.attribute.python",
+                "storage.type.annotation.java",
+                "meta.decorator.typescript",
+                "punctuation.decorator",
+                "entity.name.type.anchor.yaml",
+                "variable.other.alias.yaml",
+                "punctuation.definition.anchor.yaml"
             ],
             "settings": {
                 "foreground": "#be185d"
@@ -285,7 +302,11 @@
                 "entity.other.attribute-name.class.css",
                 "support.class.dart",
                 "support.class",
-                "support.type"
+                "support.type",
+                "entity.name.resource.terraform",
+                "entity.name.data.terraform",
+                "entity.name.module.terraform",
+                "entity.name.section.terraform"
             ],
             "settings": {
                 "foreground": "#0891b2"

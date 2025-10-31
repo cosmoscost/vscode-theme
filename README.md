@@ -8,8 +8,6 @@ A beautiful color theme for Visual Studio Code that matches the CosmosCost appli
 
 <img src="assets/screnshoots/SCR-20251027-iodm.png" alt="CosmosCost Dark Theme - Editor View" width="45%"/> <img src="assets/screnshoots/SCR-20251027-iopk.png" alt="CosmosCost Dark Theme - Full View" width="45%"/>
 
-<img src="assets/screnshoots/SCR-20251027-ioro.png" alt="CosmosCost Light Theme - Editor View" width="45%"/> <img src="assets/screnshoots/SCR-20251027-ioxj.png" alt="CosmosCost Light Theme - Full View" width="45%"/>
-
 </div>
 
 ---
@@ -262,6 +260,14 @@ Inspired by the VS Code default themes and community feedback.
   - Reduced theme JSON size by ~8% (from 13.7KB to 12.6KB per theme)
   - Optimized scope specificity for faster Trie-based tokenization
   - Fixed CSS and Dart file syntax highlighting issues
+- **DevOps Language Optimization**: Enhanced support for infrastructure and cloud-native languages
+  - **Terraform**: Added resource types, data sources, module names, and block declarations
+  - **Java**: Added annotation support (@Override, @Autowired, etc.)
+  - **Go**: Added channel operator (<-) and import/package keyword highlighting
+  - **TypeScript**: Enhanced decorator support (@Component, @Injectable, etc.)
+  - **YAML/GitHub Actions**: Added anchor/alias support (&anchor, *alias) and constant highlighting
+  - Added universal language constants (true, false, null, undefined) across all languages
+  - Theme now optimized for DevOps workflows with ~7% size increase (13.6KB per theme)
 - **Build Improvements**:
   - Added `package:analyze` script for package analysis
   - Added `package:size` script for quick size checks
